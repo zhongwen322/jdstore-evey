@@ -17,15 +17,12 @@ Rails.application.routes.draw do
 resources :carts do
   collection do
     delete :clean
-  end
-end
-
-
-resources :carts do
-  collection do
     post :checkout
   end
 end
+
+
+
 
     resources :cart_items
     resources :orders
