@@ -20,6 +20,13 @@ resources :carts do
   end
 end
 
+
+resources :carts do
+  collection do
+    post :checkout
+  end
+end
+
     resources :cart_items
 
 end
