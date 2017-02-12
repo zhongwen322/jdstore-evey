@@ -1,4 +1,13 @@
-<div class="row">
+<style media="screen">
+  .productsshow-evey{
+    margin-top: 30px;
+margin-left: 40px;
+margin-right: 40px;
+
+  }
+</style>
+
+<div class="productsshow-evey">
   <div class="col-md-6">
     <% if @product.image.present? %>
       <%= image_tag(@product.image.medium.url, class: "thumbnail") %>

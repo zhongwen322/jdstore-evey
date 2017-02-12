@@ -1,4 +1,13 @@
-<div class="row">
+
+<style media="screen">
+  .products-evey{
+    margin-top: 30px;
+margin-left: 40px;
+  }
+</style>
+
+<div class="products-evey">
+
   <% @products.each do |product| %>
   <div class="col-xs-6 col-md-3">
     <%= link_to product_path(product) do %>
@@ -11,4 +20,5 @@
     <%= product.title %> ¥ <%= product.price %>
   </div>
   <% end %>
+
 </div>
