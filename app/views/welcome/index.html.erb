@@ -43,6 +43,7 @@ position: relative;
     background-image: url(https://ooo.0o0.ooo/2017/02/12/58a0249802ce0.jpg);
     background-size: cover;
   }
+
   .bright{
     width: 75%;
     height: 500px;
@@ -97,6 +98,10 @@ position: relative;
   color:white;
   font-size: 4em;
 }
+.b1-text:hover,.b3-text:hover,.b4-text:hover{
+  color: grey;
+
+}
 .b1-text{
   text-align: right;
   margin-top: 20px;
@@ -112,6 +117,7 @@ position: relative;
 }
 .box-c{
   background-color: pink;
+
 }
 .box-d{
   background-color: #d8cfd3;
@@ -146,6 +152,9 @@ position: relative;
   background-image: url(https://ooo.0o0.ooo/2017/02/12/58a02ea84b222.jpg);
   background-size: cover;
 }
+.d2:hover{
+  box-shadow: #42455F 0 1px 5px;
+}
 .d3{
   width:5%;
   height:400px;
@@ -170,12 +179,18 @@ position: relative;
   background-size: cover;
 
 }
+.d4up:hover{
+  box-shadow: #42455F 0 1px 5px;
+}
 .d4down{
   height:195px;
   width: 100%;
   background-color: black;
   background-image: url(https://ooo.0o0.ooo/2017/02/12/58a027081e0f4.jpg);
   background-size: cover;
+}
+.d4down:hover{
+  box-shadow: #42455F 0 1px 5px;
 }
 .e-row1{
   width: 100%;
@@ -267,8 +282,22 @@ background-size: cover;
 .contactus{
   color:  #3c3837;
 }
-
-
+.box-c{
+  height:600px;
+}
+.f-left{
+  width:50%;
+  height:200px;
+  float: left;
+  background-color: beige;
+  text-align: center;
+}
+.f-right{
+  width:50%;
+  height:200px;
+  float: left;
+  text-align: center;
+}
 </style>
 
 
@@ -289,7 +318,7 @@ MJZW-文艺家居独立设计品牌
 
 
 <!--BOXB-->
-<div class="box-b">
+<div class="box-b" id="first">
   <div class="bleft">
     <div class="b1-text">
       木
@@ -328,7 +357,7 @@ MJZW-文艺家居独立设计品牌
 
 <!--隔断-->
 <div class="breakline" style="height:200px;background-color: white">
-<div class="newarrives" style="font-size:4em; text-align: center;line-height:200px; color: #3c3e37;">
+<div class="newarrives" style="font-size:4em; text-align: center;line-height:200px; color: #3c3e37;" id="second">
   关于我们
 </div>
 </div>
@@ -384,6 +413,13 @@ MJZW-文艺家居独立设计品牌
 </div>
 <!--BOXC结束-->
 
+<!--隔断-->
+<div class="breakline" style="height:200px;background-color: white">
+<div class="newarrives" style="font-size:4em; text-align: center;line-height:200px; color: #3c3e37;" id="third">
+  今日推荐
+</div>
+</div>
+<!--隔断结束-->
 
 <!--BOXD-->
 <div class="box-d">
@@ -412,7 +448,7 @@ MJZW-文艺家居独立设计品牌
 <!--BOXD结束-->
 <!--隔断-->
 <div class="breakline" style="height:200px;background-color: #edeeee;">
-<div class="newarrives" style="font-size:4em; text-align: center;line-height:200px; color: #3c3e37;">
+<div class="newarrives" style="font-size:4em; text-align: center;line-height:200px; color: #3c3e37;" id="fourth">
   新品上架
 </div>
 </div>
@@ -466,6 +502,21 @@ MJZW-文艺家居独立设计品牌
 
 <!--BOXF-->
 <div class="box-f">
+  <div class="f-left">
+    <h3>INFO</h3>
+    <br><a href="#first">产品分类</a>
+    <br><a href="#second">关于我们</a>
+    <br><a href="#third">今日推荐</a>
+    <br><a href="#fourth">新品上架</a>
+  </div>
+
+  <div class="f-right">
+    <h2>SUBSCRIBE</h2>
+    订阅我们
+
+  </div>
+
+
 
 </div>
 <!--BOXF结束-->
