@@ -1,0 +1,2 @@
+module ProductsMuHelper
+end

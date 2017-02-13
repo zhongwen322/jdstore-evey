@@ -1,0 +1,2 @@
+module ProductsCiHelper
+end

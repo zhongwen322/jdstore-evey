@@ -29,5 +29,8 @@ end
 
     resources :cart_items
     resources :orders
+    resources :products_mu
+    resources :products_ci
+    resources :products_shi
 
 end
