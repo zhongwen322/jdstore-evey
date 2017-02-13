@@ -5,6 +5,9 @@ CarrierWave.configure do|config|
   aws_access_key_id:     'AKIAJD4UZGSAMIFP7H2Q',
   aws_secret_access_key: 'VmOJ1PmBqMWMbCtltsyiiKV7Pg64a0y97WM9oVlY',
   region:                'US West (N. California)',
+  host:                  's3.example.com',
+  endpoint:              'https://s3.example.com'
+
 
  }
  config.fog_directory = 'seanlinzhongwen'
