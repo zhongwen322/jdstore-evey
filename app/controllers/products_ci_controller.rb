@@ -1,0 +1,2 @@
+class ProductsCiController < ApplicationController
+end

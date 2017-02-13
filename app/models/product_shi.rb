@@ -1,0 +1,2 @@
+class ProductShi < ApplicationRecord
+end

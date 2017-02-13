@@ -1,0 +1,2 @@
+class ProductCi < ApplicationRecord
+end
