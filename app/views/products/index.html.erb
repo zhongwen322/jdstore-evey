@@ -1,24 +1,86 @@
-
+<head>
+  <script src="http://www.w3schools.com/lib/w3data.js"></script>
+</head>
 <style media="screen">
   .products-evey{
     margin-top: 30px;
 margin-left: 40px;
   }
+  .productstitle{
+    margin-left: 40px;
+    margin-bottom: 20px;
+  }
+  .productimage{
+    margin-bottom: 30px;
+    padding-left: 10px;
+  }
+  .productimage:hover{
+
+  }
+  .boxcenter{
+    margin: 0 auto;
+  }
+
+  #panel, #flip {
+    padding: 5px;
+    text-align: center;
+    //background-color: #d8d6d6;
+    background-color: grey;
+    border: solid 1px #c3c3c3;
+    color:white;
+}
+
+#panel {
+    padding: 30px;
+    display: none;
+
+}
 </style>
 
+<div id="flip">点击扫描二维码，获取更多优惠</div>
+<div id="panel">
+
+<img src="https://ooo.0o0.ooo/2017/02/15/58a4053a5d32a.png" alt="">
+</div>
+
+
+
 <div class="products-evey">
+  <h2 class="productstitle">全部宝贝</h2>
 
   <% @products.each do |product| %>
-  <div class="col-xs-6 col-md-3">
+  <div class="col-xs-6 col-md-3 boxcenter">
     <%= link_to product_path(product) do %>
     <% if product.image.present? %>
+
+
+
+
+<div class="productimage">
+
+
     <%= image_tag(product.image.thumb.url, class: "thumbnail") %>
     <% else %>
     <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
     <% end %>
     <% end %>
     <%= product.title %> ¥ <%= product.price %>
+
+</div>
+
+
+
+
   </div>
   <% end %>
 
 </div>
+
+
+<script>
+$(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideToggle("slow");
+    });
+});
+</script>

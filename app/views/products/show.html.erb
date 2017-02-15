@@ -8,6 +8,8 @@ margin-right: 40px;
 </style>
 
 <div class="productsshow-evey">
+
+
   <div class="col-md-6">
     <% if @product.image.present? %>
       <%= image_tag(@product.image.medium.url, class: "thumbnail") %>
