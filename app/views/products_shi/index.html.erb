@@ -1,42 +1,24 @@
+
 <style media="screen">
 .eveybox{
   padding-top: 40px;
-  padding-left: 40px;
+  padding-left: 90px;
   padding-right: 40px;
-  background-color: #d7e1ea;
+  //background-color: #f4f4e7;
+  background-image: url(https://ooo.0o0.ooo/2017/02/15/58a443a27b360.jpg);
+  color: #e9e8e6;
 }
-thead{
-  background-image: url(http://img.zcool.cn/community/03325d95585269f0000001fa31b8c73.jpg);
-  background-size: cover;
-  color: white;
-}
-tbody{
-background-color: #f4f2f2;
+.productbox{
+  width: 33%;
 }
 </style>
-
 <div class="eveybox">
-  <h2>饰</h2>
 
-  <table class="table table-bordered">
-    <thead>
-      <tr>
-        <th>#</th>
-        <th width="220">Product Pic</th>
-        <th>Name</th>
-        <th>Price</th>
-        <th width="100">Options</th>
-      </tr>
-    </thead>
+<h1>饰</h1>
+      <% @products_shi.each do |product| %>
+<div class="productbox">
 
-    <tbody>
 
-      <% @products.each do |product| %>
-      <tr>
-        <td>
-          <%= product.id %>
-        </td>
-        <td>
         <%= link_to product_path(product) do %>
         <% if product.image.present? %>
         <%= image_tag(product.image.thumb.url, class: "thumbnail") %>
@@ -44,20 +26,17 @@ background-color: #f4f2f2;
         <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail")%>
         <% end %>
         <% end %>
-        </td>
-        <td>
-          <%= product.title %>
-        </td>
-        <td>
-          <%= product.price %>
-        </td>
-        <td>
-          <%= link_to("Edit", edit_admin_product_path(product)) %>
-        </td>
-      </tr>
-      <% end %>
-    </tbody>
 
-  </table>
+        <div class="" style="">
+          【<%= product.title %>】
+           <span class="" style="color:orange;font-weight:bold;">¥ <%= product.price %></span>
+        </div>
+
+<br>
+<br>
+
+
+</div>
+      <% end %>
 
 </div>

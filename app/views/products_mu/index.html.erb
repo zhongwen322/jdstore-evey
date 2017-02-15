@@ -2,46 +2,22 @@
 <style media="screen">
 .eveybox{
   padding-top: 40px;
-  padding-left: 40px;
+  padding-left: 90px;
   padding-right: 40px;
-  background-color: #f4f4e7;
-
-
-
+  //background-color: #f4f4e7;
+  background-image: url(https://ooo.0o0.ooo/2017/02/15/58a43d0fbaebf.jpg);
+  color: #cfcdc5;
 }
-tbody{
-  background-color: #efeded;
-}
-thead{
-  background-color: #d4ccca;
-  background-image: url(http://pic.qiantucdn.com/58pic/17/32/54/58PIC58PICN58PICTvw_1024.jpg);
-  background-size: cover;
-  color: white;
+.productbox{
+  width: 33%;
 }
 </style>
 <div class="eveybox">
 
-  <h1>木</h1>
+<h1>木</h1>
+      <% @products_mu.each do |product| %>
+<div class="productbox">
 
-  <table class="table table-bordered">
-    <thead>
-      <tr>
-        <th>#</th>
-        <th width="220">Product Pic</th>
-        <th>Name</th>
-        <th>Price</th>
-        <th width="100">Options</th>
-      </tr>
-    </thead>
-
-    <tbody>
-
-      <% @products.each do |product| %>
-      <tr>
-        <td>
-          <%= product.id %>
-        </td>
-        <td>
         <%= link_to product_path(product) do %>
         <% if product.image.present? %>
         <%= image_tag(product.image.thumb.url, class: "thumbnail") %>
@@ -49,20 +25,17 @@ thead{
         <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail")%>
         <% end %>
         <% end %>
-        </td>
-        <td>
-          <%= product.title %>
-        </td>
-        <td>
-          <%= product.price %>
-        </td>
-        <td>
-          <%= link_to("Edit", edit_admin_product_path(product)) %>
-        </td>
-      </tr>
-      <% end %>
-    </tbody>
 
-  </table>
+        <div class="" style="">
+          【<%= product.title %>】
+           <span class="" style="color:orange;font-weight:bold;">¥ <%= product.price %></span>
+        </div>
+
+<br>
+<br>
+
+
+</div>
+      <% end %>
 
 </div>

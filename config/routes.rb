@@ -32,5 +32,6 @@ end
     resources :products_mu
     resources :products_ci
     resources :products_shi
+    resources :protfolio
 
 end
