@@ -27,6 +27,12 @@
     <%= f.input :image, as: :file %>
   </div>
 
+  <div class="group">
+    <%= f.input :is_mu %>
+    <%= f.input :is_ci %>
+    <%= f.input :is_shi %>
+  </div>
+
   <%= f.submit "Submit", data: { disable_with: "Submitting..." } %>
 
 <% end %>
