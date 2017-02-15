@@ -18,6 +18,7 @@
       <% @products_shi.each do |product| %>
 <div class="productbox">
 
+
         <%= link_to product_path(product) do %>
         <% if product.image.present? %>
         <%= image_tag(product.image.thumb.url, class: "thumbnail") %>

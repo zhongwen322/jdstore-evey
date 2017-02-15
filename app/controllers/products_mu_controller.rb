@@ -1,15 +1,13 @@
 class ProductsMuController < ApplicationController
 
-def index
-  @products_mu = Product.find([1,2,3,4,5])
-
-
-end
-
-
+ def index
+   @products = Product.where(is_mu: true)
+ end
 
   private
+
   def product_params
-    params.require(:product).permit(:title, :description, :quantity, :price, :image)
+    params.require(:product).permit(:title, :description, :quantity, :price, :image, :mu_name, :ci_name, :shi_name, :is_mu, :is_ci, :is_shi)
   end
+
 end
