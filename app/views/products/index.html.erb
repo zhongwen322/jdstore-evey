@@ -12,7 +12,7 @@ margin-left: 40px;
   }
   .productimage{
     margin-bottom: 30px;
-    padding-left: 10px;
+
   }
   .productimage:hover{
 
@@ -64,7 +64,12 @@ margin-left: 40px;
     <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
     <% end %>
     <% end %>
-    <%= product.title %> ¥ <%= product.price %>
+    <div class="" style="">
+      【<%= product.title %>】
+       <span class="" style="color:orange;font-weight:bold;">¥ <%= product.price %></span>
+    </div>
+
+
 
 </div>
 
