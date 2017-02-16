@@ -6,7 +6,7 @@ class ProductsMuController < ApplicationController
 
 
  def product_params
-  params.require(:product).permit(:title, :description, :quantity, :price, :image,  :is_mu, :is_ci, :is_shi)
-  end
-  
+params.require(:product).permit(:title, :description, :quantity, :price, :image,  :is_mu, :is_ci, :is_shi)
+end
+
    end

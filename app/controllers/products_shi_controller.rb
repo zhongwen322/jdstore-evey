@@ -3,8 +3,10 @@ class ProductsMuController < ApplicationController
  @products = Product.where(is_shi: true)
  end
 
- 
+
+
  def product_params
-  params.require(:product).permit(:title, :description, :quantity, :price, :image,  :is_mu, :is_ci, :is_shi)
-  end
+params.require(:product).permit(:title, :description, :quantity, :price, :image,  :is_mu, :is_ci, :is_shi)
+end
+
    end
