@@ -18,4 +18,6 @@
 //= require bootstrap/modal
 //= require_tree .
 //= require bootstrap/carousel
+//= require jquery.raty
+//= require ratyrate
 $(document).ready(function() {   $('#myCarousel').carousel({interval: 2000}); });
