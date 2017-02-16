@@ -2,11 +2,9 @@ Rails.application.routes.draw do
   root 'welcome#index'
   devise_for :users
 
-    namespace :admin do
-      resources :products
-
+  namespace :admin do
+    resources :products
   end
-
 
   resources :products do
     member do
@@ -24,6 +22,13 @@ end
 namespace :account do
   resources :orders
 end
+
+  resources :orders do
+    member do
+     post :pay_with_alipay
+     post :pay_with_wechat
+    end
+  end
 
 
 
