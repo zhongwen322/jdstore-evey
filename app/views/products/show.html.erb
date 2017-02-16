@@ -26,10 +26,11 @@ margin-right: 40px;
       </p>
     </div>
     <div> 数量 : <%= @product.quantity %> </div>
+  </br>
     <div>
-    味道 : <%= rating_for @product, 'a', disable_after_rate: true %>
-    外观 : <%= rating_for @product, 'b', disable_after_rate: true %>
-    价格 : <%= rating_for @product, 'c', disable_after_rate: true %>
+    外观 : <%= rating_for @product, 'a', disable_after_rate: true %>
+    质地 : <%= rating_for @product, 'b', disable_after_rate: true %>
+    性价比 : <%= rating_for @product, 'c', disable_after_rate: true %>
     </div>
     <div class="product-price"> ￥ <%= @product.price %> </div>
     <div class="pull-right">
