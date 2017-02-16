@@ -1,12 +1,10 @@
-class ProductsShiController < ApplicationController
+class ProductsMuController < ApplicationController
+   def index
+ @products = Product.where(is_shi: true)
+ end
 
-  def index
-    @products_shi = Product.find([11,12,13,14,15])
-
+ 
+ def product_params
+  params.require(:product).permit(:title, :description, :quantity, :price, :image,  :is_mu, :is_ci, :is_shi)
   end
-
-    private
-    def product_params
-      params.require(:product).permit(:title, :description, :quantity, :price, :image)
-    end
-end
+   end
