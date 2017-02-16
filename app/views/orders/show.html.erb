@@ -61,7 +61,7 @@
       </tbody>
     </table>
 
-       <div class="pull-left">
+       <div class="pull-right">
          <% if @order.order_placed? || @order.paid? %>
        <%= link_to("申请取消订单", apply_to_cancel_order_path(@order), method: :post, class: "btn  btn-info") %>
          <% end %>
