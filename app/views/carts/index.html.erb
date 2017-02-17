@@ -7,11 +7,30 @@
     padding-bottom: 20px;
     background-color: #edeeed;
     background-size: cover;
+    background-image: url(https://static.pexels.com/photos/5106/forest-trees-fog-foggy.jpg);
+    background-size: cover;
+  }
+  a{
+    color: black;
+    font-weight: bold;
+  }
+  .bgc{
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 3px;
+  }
+  .body{
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 90%;
   }
 </style>
 
-<div class="row carts-evey">
-  <div class="col-md-12">
+<body>
+
+
+<div class="row carts-evey checkout">
+  <div class="col-md-12 bgc">
 
 <%= link_to("清空购物车", clean_carts_path, method: :delete, class: "pull-right", style:"text-decoration: underline;", data: {confirm:"你确定要清空整个购物车吗？"}) %>
 
@@ -95,3 +114,4 @@
 </div>
   </div>
 </div>
+</body>
