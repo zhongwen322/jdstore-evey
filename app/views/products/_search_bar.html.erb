@@ -1,5 +1,19 @@
-<div class="row">
-  <div class="col-sm-9 col-lg-8 col-lg-offset-2">
+<style media="screen">
+  .eveysearch{
+    display: inline;
+    position: fixed;
+    z-index: 2;
+    top:8px;
+    left:350px;
+  }
+
+
+</style>
+
+
+
+<div class="eveysearch">
+  <div class="col-md-6">
     <%= form_tag search_products_path, method: :get, class: 'products-search-form'  do %>
       <div class="input-group">
         <input type="text" class="form-control" name="q" value="<%= params[:q] %>" placeholder="搜索心仪的家居">
