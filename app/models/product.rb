@@ -3,4 +3,6 @@ class Product < ApplicationRecord
 
   ratyrate_rateable "a", "b", "c"
 
+  has_many :reviews
+
 end

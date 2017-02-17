@@ -52,6 +52,7 @@ background-size: cover;
     质地 : <%= rating_for @product, 'b', disable_after_rate: true %>
     性价比 : <%= rating_for @product, 'c', disable_after_rate: true %>
     </div>
+
     <div class="product-price"> ￥ <%= @product.price %> </div>
     <div class="pull-left" style="margin-top:10px;">
       <% if @product.quantity > 0 %>
@@ -60,6 +61,20 @@ background-size: cover;
     已销售一空
    <% end %>
 
+    </div>
+  </div>
+</div>
+
+<div class="row review">
+  <div class="col-sm-10 col-sm-offset-1">
+    <h3 class="reviews_title">
+      <%= @product.reviews.count %> Reviews
+    </h3>
+    <hr>
+    <div id="reivews">
+      <%= render @product.reviews%>
+      <hr>
+      <%= render "reviews/form"%>
     </div>
   </div>
 </div>
