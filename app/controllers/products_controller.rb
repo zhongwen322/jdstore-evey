@@ -5,6 +5,8 @@ before_action :validates_search_key, only: [:search]
 def search
   if @query_string.present?
     @products = search_params
+  else
+    @products = Product.all
   end
 end
 
