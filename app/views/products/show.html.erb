@@ -1,9 +1,20 @@
 <style media="screen">
   .productsshow-evey{
-    margin-top: 30px;
-margin-left: 40px;
-margin-right: 40px;
+    padding-top: 30px;
+padding-left: 40px;
+padding-right: 40px;
 
+height:700px;
+width: 100%;
+background-color: grey;
+background-image: url(https://static.pexels.com/photos/4827/nature-forest-trees-fog.jpeg);
+background-size: cover;
+  }
+  .pdc-description{
+    background-color: rgba(255, 255, 255, 0.3);
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 </style>
 
@@ -13,7 +24,7 @@ margin-right: 40px;
   <div class="col-md-6">
     <% if @product.image.present? %>
 
-    
+
     <div id="zoom_01">
       <%= image_tag(@product.image.medium.url, class: "thumbnail") %>
     </div>
@@ -24,12 +35,15 @@ margin-right: 40px;
     <% end %>
   </div>
 
-  <div class="col-md-6">
+  <div class="col-md-6 pdc-description">
     <h2> <%= @product.title %> </h2>
+
     <div style="height:100px;">
+
       <p>
         <%= @product.description %>
       </p>
+      <hr>
     </div>
     <div> 数量 : <%= @product.quantity %> </div>
   </br>
@@ -39,7 +53,7 @@ margin-right: 40px;
     性价比 : <%= rating_for @product, 'c', disable_after_rate: true %>
     </div>
     <div class="product-price"> ￥ <%= @product.price %> </div>
-    <div class="pull-right">
+    <div class="pull-left" style="margin-top:10px;">
       <% if @product.quantity > 0 %>
     <%= link_to("加入购物车", add_to_cart_product_path(@product), :method => :post, :class => "btn btn-primary btn-lg btn-danger") %>
    <% else %>
