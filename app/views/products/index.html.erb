@@ -44,6 +44,11 @@ margin-left: 40px;
 </div>
 
 
+<div class="searchbar">
+  <%= render :partial => "products/search_bar" %>
+</div>
+
+
 
 <div class="products-evey">
   <h2 class="productstitle">全部宝贝</h2>
@@ -63,7 +68,7 @@ margin-left: 40px;
     <% else %>
 
       <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
-    
+
 
     <% end %>
     <% end %>

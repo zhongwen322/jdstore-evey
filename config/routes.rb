@@ -12,6 +12,7 @@ Rails.application.routes.draw do
        post :shipped
        post :return
      end
+     
    end
   end
 

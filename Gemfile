@@ -46,6 +46,9 @@ gem 'awesome_rails_console'
 gem 'aasm'
 gem 'figaro'
 gem 'ratyrate'
+gem 'ransack'
+gem 'seo_helper','~> 1.0'
+gem "will_paginate"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
