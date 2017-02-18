@@ -56,7 +56,7 @@ margin-bottom:8px;
              </li>
              <li>
          <%= link_to favorites_path do  %>
-            收藏夹 <i class="fa fa-gratipay" aria-hidden="true"></i> 
+            收藏夹 <i class="fa fa-gratipay" aria-hidden="true"></i>
          <% end %>
        </li>
 
@@ -66,9 +66,9 @@ margin-bottom:8px;
 
                   <% if !current_user %>
 
-                  <li><%= link_to("注册", new_user_registration_path) %> </li>
+                  <li><%= link_to("  注册", new_user_registration_path, class: 'fa fa-american-sign-language-interpreting') %> </li>
 
-  <li><%= link_to(content_tag(:i, '登入', class: 'fa fa-sign-in'), new_user_session_path) %></li>
+  <li><%= link_to(content_tag(:i, '  登入', class: 'fa fa-sign-in'), new_user_session_path) %></li>
 
 
 
@@ -82,16 +82,16 @@ margin-bottom:8px;
 
                       <% if current_user.admin? %>
                                <li>
-                                 <%= link_to("Admin 选单", admin_products_path ) %>
+                                 <%= link_to("   Admin 选单", admin_products_path,class: 'fa fa-user' ) %>
                                </li>
                              <% end %>
 
                              <li>
-                            <%= link_to("个人订单列表", account_orders_path ) %>
+                            <%= link_to("   个人订单列表", account_orders_path,class: 'fa fa-list' ) %>
                            </li>
 
 
-                        <li> <%= link_to(content_tag(:i, '登出', class: 'fa fa-sign-out'), destroy_user_session_path, method: :delete) %> </li>
+                        <li> <%= link_to(content_tag(:i, '   登出', class: 'fa fa-sign-out'), destroy_user_session_path, method: :delete) %> </li>
                     </ul>
                   </li>
                 <% end %>
