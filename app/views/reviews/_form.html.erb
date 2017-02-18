@@ -1,3 +1,10 @@
+
+<style media="screen">
+  .field{
+    margin-bottom: 10px;
+  }
+</style>
+
 <%= simple_form_for([@product, @product.reviews.build]) do |f|%>
 
   <div class="field">
@@ -5,5 +12,5 @@
   </div>
 
 
-  <%= f.submit "Add a Review", class: "btn btn-primary" %>
+  <%= f.submit "添加评论", class: "btn btn-primary" %>
 <% end %>
