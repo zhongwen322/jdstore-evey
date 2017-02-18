@@ -1,4 +1,7 @@
 class CartsController < ApplicationController
+
+  before_filter :authenticate_user!
+
   def clean
     current_cart.clean!
     flash[:warning] = "已清空购物车"

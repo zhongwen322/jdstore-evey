@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
 
 before_action :validates_search_key, only: [:search]
+before_action :authenticate_user!, only: [:favorite, :unfavorite]
 
 def favorite
  	@product = Product.find(params[:id])
