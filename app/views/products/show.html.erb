@@ -24,6 +24,10 @@ background-repeat: repeat-y;
     padding-bottom: 30px;
 
   }
+  .heart-e{
+    width: 100px;
+    height:200px;
+  }
 </style>
 <div class="productsshow-evey">
 
@@ -61,12 +65,32 @@ background-repeat: repeat-y;
     </div>
 
     <div class="product-price"> ￥ <%= @product.price %> </div>
-    <div class="pull-left" style="margin-top:10px;">
+    <!--收藏开始-->
+        <div class="heart-e" style="margin-top:20px;float:left;margin-right:30px;">
+           <% if !current_user.is_fan_of?(@product) %>
+                    <%= link_to favorite_product_path(@product), :class => "like btn btn-default",method: :post do %>
+                    <i class="fa fa-heart" aria-hidden="true">    收藏宝贝</i>
+                    <% end %>
+                  <% else %>
+                    <%= link_to unfavorite_product_path(@product), :class => "like btn btn-default",method: :post do %>
+                    <i class="fa fa-heart" aria-hidden="true" style="color:red;"></i>
+                   <% end %>
+                 <% end %>
+         </div>
+    <!--收藏结束-->
+
+    <div class="pull-right" style="margin-top:10px;">
       <% if @product.quantity > 0 %>
+
+
+
     <%= link_to("加入购物车", add_to_cart_product_path(@product), :method => :post, :class => "btn btn-primary btn-lg btn-danger") %>
    <% else %>
     已销售一空
    <% end %>
+
+
+
 
     </div>
   </div>
@@ -91,17 +115,6 @@ background-repeat: repeat-y;
   <!--搜索区域结束-->
 </div>
 
-    <div>
-       <% if !current_user.is_fan_of?(@product) %>
- 						   <%= link_to favorite_product_path(@product), :class => "like btn btn-default",method: :post do %>
- 						   <i class="fa fa-heart" aria-hidden="true"></i>
- 							 <% end %>
- 						 <% else %>
- 							 <%= link_to unfavorite_product_path(@product), :class => "like btn btn-default",method: :post do %>
- 							 <i class="fa fa-heart" aria-hidden="true" style="color:red;"></i>
- 							<% end %>
- 						<% end %>
-     </div>
 
 
 
