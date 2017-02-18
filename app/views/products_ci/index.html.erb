@@ -9,14 +9,14 @@
   color: grey;
 }
 .productbox{
-  width: 33%;
+  //width: 33%;
 }
 </style>
-<div class="eveybox">
+<div class="eveybox row">
 
 <h1>瓷</h1>
       <% @products.each do |product| %>
-<div class="productbox">
+<div class="productbox col-xs-6 col-md-3">
 
         <%= link_to product_path(product) do %>
         <% if product.image.present? %>

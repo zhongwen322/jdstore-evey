@@ -12,11 +12,11 @@
   width: 33%;
 }
 </style>
-<div class="eveybox">
+<div class="eveybox row">
 
 <h1>饰</h1>
       <% @products.each do |product| %>
-<div class="productbox">
+<div class="productbox col-xs-6 col-md-3">
 
 
         <%= link_to product_path(product) do %>
