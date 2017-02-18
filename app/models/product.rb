@@ -5,4 +5,7 @@ class Product < ApplicationRecord
 
   has_many :reviews
 
+  has_many :favorites
+  has_many :fans, :through => :favorites, :source => :user
+
 end

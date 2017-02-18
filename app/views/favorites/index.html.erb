@@ -1,0 +1,128 @@
+<head>
+  <script src="http://www.w3schools.com/lib/w3data.js"></script>
+</head>
+<style media="screen">
+  .products-evey{
+    margin-top: 30px;
+margin-left: 40px;
+  }
+  .productstitle{
+    margin-left: 40px;
+    margin-bottom: 20px;
+  }
+  .productimage{
+    margin-bottom: 30px;
+
+  }
+  .productimage:hover{
+
+  }
+  .boxcenter{
+    margin: 0 auto;
+  }
+
+  #panel, #flip {
+    padding: 5px;
+    text-align: center;
+    //background-color: #d8d6d6;
+    background-color: grey;
+    border: solid 1px #c3c3c3;
+    color:white;
+}
+
+#panel {
+    padding: 30px;
+    display: none;
+
+}
+.pdt-index{
+  background-image: url(https://ooo.0o0.ooo/2017/02/17/58a693c65a5d8.jpg);
+background-size: cover;
+margin: 0 auto;
+
+}
+.titlebox{
+  color:#edeeec;
+  height:30px;
+  width:210px;
+  background-color:rgba(0,0,0,0.3);
+  line-height: 30px;
+  clear: both;
+  margin-bottom: 20px;
+  text-align: center;
+  border-radius: 3px;
+}
+.titlebox:hover{
+  background-color: #02142e;
+}
+</style>
+
+<!--扫描二维码-->
+<div id="flip">点击扫描二维码，获取更多优惠</div>
+<div id="panel">
+
+<img src="https://ooo.0o0.ooo/2017/02/15/58a4053a5d32a.png" alt="">
+</div>
+<!--扫描二维码结束-->
+
+<body class="pdt-index">
+
+
+<div class="products-evey">
+  <h2 class="productstitle" style="color: #edeeec;">收藏夹里的宝贝</h2>
+
+<!--产品内容开始-->
+  <% @products.each do |product| %>
+  <div class="col-xs-6 col-md-3 boxcenter">
+
+
+    <%= link_to product_path(product) do %>
+
+
+    <% if product.image.present? %>
+
+
+    <%= image_tag(product.image.thumb.url, class: "thumbnail") %>
+    <% else %>
+
+      <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
+
+
+    <% end %>
+    <% end %>
+<div class="titlebox">
+
+      【<%= product.title %>】
+       <span class="" style="color:orange;font-weight:bold;">¥ <%= product.price %></span>
+
+<div class="" style="height:30px;width:100%;">
+
+</div>
+
+    </div>
+
+<!--产品内容结束-->
+
+
+
+
+
+  </div>
+
+  <% end %>
+
+</div>
+
+
+</body>
+
+<script>
+$(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideToggle("slow");
+    });
+});
+
+
+
+</script>
