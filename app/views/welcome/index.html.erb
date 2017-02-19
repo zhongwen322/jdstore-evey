@@ -32,13 +32,14 @@
     }
     .box-a {
         background-color: beige;
-        background-image: url("https://ooo.0o0.ooo/2017/02/12/58a00c1dcddfb.jpg");
+        //background-image: url("https://ooo.0o0.ooo/2017/02/12/58a00c1dcddfb.jpg");
+        background-image: url("https://static.pexels.com/photos/4827/nature-forest-trees-fog.jpeg");
         background-size: cover;
         width: 100%;
     }
     .box-a:hover {
-        background-image: url("https://ooo.0o0.ooo/2017/02/14/58a230c8bf929.jpg");
-        background-size: cover;
+        //background-image: url("https://ooo.0o0.ooo/2017/02/14/58a230c8bf929.jpg");
+        //background-size: cover;
     }
     .atext {
         text-align: right;
@@ -386,9 +387,16 @@
     <!--BOXA-->
     <div class="box-a">
 
-        <div class="atext">
+<img class="jqimg" src="https://ooo.0o0.ooo/2017/02/14/58a230c8bf929.jpg" alt="">
+        <div class="atext" style="color:white;">
             <span class="headline">文艺生活 品质典范</span>
+
             MJZW-文艺家居独立设计品牌
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
         </div>
 
     </div>
@@ -671,10 +679,15 @@
 
 </div>
 
+
 <script type="text/javascript">
 
     $(".e-square").mouseenter(function () {
         $(this).fadeOut(300).fadeIn(400)
 
     })
+
+    $(".box-a").mouseenter(function(){
+  $(".jqimg").animate({left:'250px'});
+});
 </script>
