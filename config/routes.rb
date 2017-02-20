@@ -19,19 +19,15 @@ Rails.application.routes.draw do
 
 
   resources :products do
-
-    resources :reviews
-
-    collection do
-      get :search
-    end
-
     member do
       post :add_to_cart
       post :favorite
       post :unfavorite
     end
-
+    collection do
+      get :search
+    end
+    resources :reviews
   end
 
 

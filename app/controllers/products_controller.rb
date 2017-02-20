@@ -7,12 +7,14 @@ def favorite
  	@product = Product.find(params[:id])
  		current_user.favorite_products << @product
  		redirect_to :back
+    flash[:notice] = "成功将#{@product.title}加入收藏夹"
 end
 
 def unfavorite
  	@product = Product.find(params[:id])
  	current_user.favorite_products.delete(@product)
  	redirect_to :back
+  flash[:notice] = "已将#{@product.title}从收藏夹取出"
 end
 
 def search
@@ -38,8 +40,8 @@ def add_to_cart
     flash[:notice] = "成功将#{@product.title}加入购物车"
   else
     flash[:warning] = "你的购物车已有此物品"
-    render :show
   end
+    redirect_to :back
 end
 
 
