@@ -55,6 +55,36 @@ margin: 0 auto;
 .titlebox:hover{
   background-color: #02142e;
 }
+.productstitle{
+  color: #edeeec;
+  text-align:left;
+  font-size: 30px;
+}
+.smallcircle{
+  width:50px;
+  height:50px;
+  background-color: #c5c5c5;
+  border-radius: 25px;
+  border:2px solid grey;
+  margin-bottom: 10px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 25px;
+  font-weight: bold;
+  position: relative;
+}
+.smallcircle:hover{
+  background-color: orange;
+  border: 2px solid white;
+  color:white;
+}
+.qbbb-text{
+  font-size:12px;
+  color: white;
+  position: relative;
+  left:20px;
+  top:-4px;
+}
 </style>
 
 <!--扫描二维码-->
@@ -69,7 +99,53 @@ margin: 0 auto;
 
 
 <div class="products-evey">
-  <h2 class="productstitle" style="color: #edeeec;">全部宝贝</h2>
+
+<!--题头内容开始-->
+<div class="qbbb">
+  <h2 class="productstitle" style="">全部宝贝</h2>
+  <hr>
+  <table>
+    <tr>
+      <td><div class="smallcircle">邮</div></td>
+      <td class="qbbb-text">全国包邮
+        <br>卖家承担从卖家处发货到您收货地址处的大陆非偏远地区首次发货的运费。</td>
+
+    </tr>
+
+    <tr>
+      <td><div class="smallcircle">保</div></td>
+      <td class="qbbb-text">退货运费险
+<br>卖家承诺提供退货运费险，在交易成功前，消费者发起退货请求，保险公司对退货产生的单程运费提供保险服务。</td>
+
+    </tr>
+
+    <tr>
+      <td><div class="smallcircle">发</div></td>
+      <td class="qbbb-text">48小时发货
+<br>卖家承诺在您付款后的48小时内完成发货，以快递公司系统内揽件记录的时间为准（定制、预售、等特殊类目除外）。</td>
+
+    </tr>
+
+    <tr>
+      <td><div class="smallcircle">退</div></td>
+      <td class="qbbb-text">质无忧
+        <br>商家承诺所售商品如因“不喜欢/不想要/不适合”或质量问题发生退货退款，可向交易诚信记录良好的消费者提供闪电退货和极速退款服务。</td>
+
+    </tr>
+  </table>
+
+
+
+
+
+
+
+
+
+  <hr>
+</div>
+
+<!--题头内容结束-->
 
 <!--产品内容开始-->
   <% @products.each do |product| %>

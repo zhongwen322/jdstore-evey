@@ -1,0 +1,48 @@
+
+<head>
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
+</head>
+
+<style>
+#panel, #flip {
+  padding: 5px;
+  text-align: center;
+  //background-color: #d8d6d6;
+  background-color: grey;
+  border: solid 1px #c3c3c3;
+  color:white;
+}
+
+#panel {
+  padding: 30px;
+  display: none;
+
+}
+.pdt-index{
+background-image: url(https://ooo.0o0.ooo/2017/02/17/58a693c65a5d8.jpg);
+background-size: cover;
+margin: 0 auto;
+
+}
+</style>
+
+
+<!--扫描二维码-->
+<body>
+<div id="flip">点击扫描二维码，获取更多优惠</div>
+<div id="panel">
+
+<img src="https://ooo.0o0.ooo/2017/02/15/58a4053a5d32a.png" alt="">
+</div>
+<!--扫描二维码结束-->
+</body>
+
+
+
+<script>
+$(document).ready(function(){
+  $("#flip").click(function(){
+      $("#panel").slideToggle("slow");
+  });
+});
+</script>
