@@ -85,20 +85,18 @@ background-repeat: repeat-y;
          </div>
     <!--收藏结束-->
 
+<!--加入购物车开始-->
     <div class="pull-right" style="margin-top:10px;">
       <% if @product.quantity > 0 %>
-
-
-
     <%= link_to("加入购物车", add_to_cart_product_path(@product), :method => :post, :class => "btn btn-primary btn-lg btn-danger") %>
    <% else %>
     已销售一空
    <% end %>
 
-
-
-
     </div>
+
+<!--加入购物车结束-->
+
   </div>
 
   <!--搜索区域开始-->
