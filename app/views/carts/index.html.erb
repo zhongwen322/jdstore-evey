@@ -5,9 +5,10 @@
     padding-left: 40px;
     padding-right: 40px;
     padding-bottom: 20px;
-    background-color: #edeeed;
+    //background-color: #edeeed;
+    background-color: #302f2f;
     background-size: cover;
-    background-image: url(https://static.pexels.com/photos/5106/forest-trees-fog-foggy.jpg);
+    //background-image: url("https://static.pexels.com/photos/5106/forest-trees-fog-foggy.jpg");
     background-size: cover;
   }
   a{
@@ -15,7 +16,7 @@
     font-weight: bold;
   }
   .bgc{
-    background-color: rgba(255,255,255,0.2);
+    //background-color: rgba(255,255,255,0.2);
     border-radius: 3px;
   }
   .body{
@@ -23,6 +24,20 @@
     padding-left: 40px;
     padding-right: 40px;
     width: 90%;
+  }
+  .table{
+    background-color: white;
+  }
+  thead{
+    background-color: #b10000;
+    background-image: url("http://pic44.nipic.com/20140725/11235789_094547908000_2.jpg");
+    color:white;
+    text-align: center;
+
+  }
+  table{
+    padding: 30px;
+
   }
 </style>
 
@@ -32,10 +47,10 @@
 <div class="row carts-evey checkout">
   <div class="col-md-12 bgc">
 
-<%= link_to("清空购物车", clean_carts_path, method: :delete, class: "pull-right", style:"text-decoration: underline;", data: {confirm:"你确定要清空整个购物车吗？"}) %>
+<%= link_to("清空购物车", clean_carts_path, method: :delete, class: "pull-right btn btn-danger", style:"", data: {confirm:"你确定要清空整个购物车吗？"}) %>
 
-    <h2>购物车</h2>
-
+    <h2 style="color:#e5e5e5;">购物车</h2>
+<hr>
 <table class="table table-bordered">
 
 <thead>
@@ -73,13 +88,13 @@
 <% cart_item = current_cart.cart_items.find_by(product_id: cart_item.product_id) %>
 <%= form_for cart_item, url: cart_item_path(cart_item.product_id) do |f| %>
  <%= f.select :quantity, 1..cart_item.product.quantity %>
-<%= f.submit "更新", data: {disable_with: "Submiting..."} %>
+<%= f.submit "更新",class:"btn btn-info",style:"width:60px;", data: {disable_with: "Submiting..."} %>
 <% end %>
   </td>
 
   <td>
              <%= link_to cart_item_path(cart_item.product_id), method: :delete do %>
-                <i class="fa fa-trash"></i>
+                <i class="fa fa-trash fa-lg"></i>
               <% end %>
   </td>
 
