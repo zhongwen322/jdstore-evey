@@ -1,6 +1,6 @@
 class CartsController < ApplicationController
 
-  before_filter :authenticate_user!
+  before_filter :authenticate_user!, only: [:checkout]
 
   def clean
     current_cart.clean!
