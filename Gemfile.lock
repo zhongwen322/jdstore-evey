@@ -222,6 +222,8 @@ GEM
       unicode-display_width (~> 0.1.1)
     i18n (0.7.0)
     inflecto (0.0.2)
+    intercom-rails (0.3.4)
+      activesupport (> 3.0)
     ipaddress (0.8.3)
     jbuilder (2.6.1)
       activesupport (>= 3.0.0, < 5.1)
@@ -378,6 +380,7 @@ DEPENDENCIES
   font-awesome-rails
   hirb
   hirb-unicode
+  intercom-rails
   jbuilder (~> 2.5)
   jquery-rails
   letter_opener
