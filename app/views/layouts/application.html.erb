@@ -5,7 +5,7 @@
         <%= csrf_meta_tags %>
 
         <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
 
         <style media="screen">
 
@@ -31,6 +31,7 @@
 
         <%= render "common/footer" %>
         <%= render "common/floatingbar" %>
-
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <% yield :handwrite_javascript %>
     </body>
 </html>
